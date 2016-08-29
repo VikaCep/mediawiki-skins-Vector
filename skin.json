@@ -1,60 +1,58 @@
 {
-	"name": "Vector",
+	"name": "Nodos",
 	"author": [
-		"Trevor Parscal",
-		"Roan Kattouw",
-		"..."
+		"Virginia Cepeda"
 	],
-	"url": "https://www.mediawiki.org/wiki/Skin:Vector",
-	"descriptionmsg": "vector-skin-desc",
-	"namemsg": "skinname-vector",
+	"url": "https://www.mediawiki.org/wiki/Skin:Nodos",
+	"descriptionmsg": "nodos-skin-desc",
+	"namemsg": "skinname-nodos",
 	"license-name": "GPL-2.0+",
 	"type": "skin",
 	"requires": {
 		"MediaWiki": ">= 1.25.0"
 	},
 	"ConfigRegistry": {
-		"vector": "GlobalVarConfig::newInstance"
+		"nodos": "GlobalVarConfig::newInstance"
 	},
 	"ValidSkinNames": {
-		"vector": "Vector"
+		"nodos": "Nodos"
 	},
 	"MessagesDirs": {
-		"Vector": [
+		"Nodos": [
 			"i18n"
 		]
 	},
 	"AutoloadClasses": {
-		"SkinVector": "SkinVector.php",
-		"VectorTemplate": "VectorTemplate.php"
+		"SkinNodos": "SkinNodos.php",
+		"NodosTemplate": "NodosTemplate.php"
 	},
-	"@note": "When modifying skins.vector.styles definition, make sure the installer still works",
+	"@note": "When modifying skins.nodos.styles definition, make sure the installer still works",
 	"ResourceModules": {
-		"skins.vector.styles": {
+		"skins.nodos.styles": {
 			"targets": [ "desktop", "mobile" ],
 			"position": "top",
 			"styles": {
-				"screen.less": {
+				"css/screen.css": {
 					"media": "screen"
 				},
-				"screen-hd.less": {
+				"css/screen-hd.css": {
 					"media": "screen and (min-width: 982px)"
 				}
 			}
 		},
-		"skins.vector.styles.responsive": {
+		"skins.nodos.styles.responsive": {
 			"targets": [ "desktop", "mobile" ],
 			"position": "top",
 			"styles": {
-				"responsive.less": {
+				"css/responsive.css": {
 					"media": "screen and (max-width: 768px)"
 				}
 			}
 		},
-		"skins.vector.js": {
+		"skins.nodos.js": {
 			"scripts": [
 				"collapsibleTabs.js",
-				"vector.js"
+				"nodos.js"
 			],
 			"position": "top",
 			"dependencies": [
@@ -65,10 +63,10 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "Vector"
+		"remoteSkinPath": "Nodos"
 	},
 	"ResourceModuleSkinStyles": {
-		"vector": {
+		"nodos": {
 			"jquery.tipsy": "skinStyles/jquery.tipsy.less",
 			"jquery.ui.core": [
 				"skinStyles/jquery.ui/jquery.ui.core.css",
@@ -94,9 +92,9 @@
 		}
 	},
 	"config": {
-		"VectorUseSimpleSearch": true,
-		"VectorUseIconWatch": true,
-		"VectorResponsive": false
+		"NodosUseSimpleSearch": true,
+		"NodosUseIconWatch": true,
+		"NodosResponsive": false
 	},
 	"manifest_version": 1
 }

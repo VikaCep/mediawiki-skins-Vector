@@ -1,6 +1,6 @@
 <?php
 /**
- * Vector - Modern version of MonoBook with fresh look and many usability
+ * Nodos - Modern version of MonoBook with fresh look and many usability
  * improvements.
  *
  * This program is free software; you can redistribute it and/or modify
@@ -23,20 +23,20 @@
  */
 
 /**
- * SkinTemplate class for Vector skin
+ * SkinTemplate class for Nodos skin
  * @ingroup Skins
  */
-class SkinVector extends SkinTemplate {
-	public $skinname = 'vector';
-	public $stylename = 'Vector';
-	public $template = 'VectorTemplate';
+class SkinNodos extends SkinTemplate {
+	public $skinname = 'nodos';
+	public $stylename = 'Nodos';
+	public $template = 'NodosTemplate';
 	/**
 	 * @var Config
 	 */
-	private $vectorConfig;
+	private $nodosConfig;
 
 	public function __construct() {
-		$this->vectorConfig = ConfigFactory::getDefaultInstance()->makeConfig( 'vector' );
+		$this->nodosConfig = ConfigFactory::getDefaultInstance()->makeConfig( 'nodos' );
 	}
 
 	/**
@@ -46,12 +46,12 @@ class SkinVector extends SkinTemplate {
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
 
-		if ( $this->vectorConfig->get( 'VectorResponsive' ) ) {
+		if ( $this->nodosConfig->get( 'NodosResponsive' ) ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
-			$out->addModuleStyles( 'skins.vector.styles.responsive' );
+			$out->addModuleStyles( 'skins.nodos.styles.responsive' );
 		}
 
-		$out->addModules( 'skins.vector.js' );
+		$out->addModules( 'skins.nodos.js' );
 	}
 
 	/**
@@ -61,8 +61,8 @@ class SkinVector extends SkinTemplate {
 	function setupSkinUserCss( OutputPage $out ) {
 		parent::setupSkinUserCss( $out );
 
-		$styles = [ 'mediawiki.skinning.interface', 'skins.vector.styles' ];
-		Hooks::run( 'SkinVectorStyleModules', [ $this, &$styles ] );
+		$styles = [ 'mediawiki.skinning.interface', 'skins.nodos.styles' ];
+		Hooks::run( 'SkinNodosStyleModules', [ $this, &$styles ] );
 		$out->addModuleStyles( $styles );
 	}
 
@@ -70,6 +70,6 @@ class SkinVector extends SkinTemplate {
 	 * Override to pass our Config instance to it
 	 */
 	public function setupTemplate( $classname, $repository = false, $cache_dir = false ) {
-		return new $classname( $this->vectorConfig );
+		return new $classname( $this->nodosConfig );
 	}
 }

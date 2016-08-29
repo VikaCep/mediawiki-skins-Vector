@@ -1,6 +1,6 @@
 <?php
 /**
- * Vector - Modern version of MonoBook with fresh look and many usability
+ * Nodos - Modern version of MonoBook with fresh look and many usability
  * improvements.
  *
  * This program is free software; you can redistribute it and/or modify
@@ -23,10 +23,10 @@
  */
 
 /**
- * QuickTemplate class for Vector skin
+ * QuickTemplate class for Nodos skin
  * @ingroup Skins
  */
-class VectorTemplate extends BaseTemplate {
+class NodosTemplate extends BaseTemplate {
 	/* Functions */
 
 	/**
@@ -36,7 +36,7 @@ class VectorTemplate extends BaseTemplate {
 		// Build additional attributes for navigation urls
 		$nav = $this->data['content_navigation'];
 
-		if ( $this->config->get( 'VectorUseIconWatch' ) ) {
+		if ( $this->config->get( 'NodosUseIconWatch' ) ) {
 			$mode = $this->getSkin()->getUser()->isWatched( $this->getSkin()->getRelevantTitle() )
 				? 'unwatch'
 				: 'watch';
@@ -178,7 +178,20 @@ class VectorTemplate extends BaseTemplate {
 			<h2><?php $this->msg( 'navigation-heading' ) ?></h2>
 
 			<div id="mw-head">
-				<?php $this->renderNavigation( 'PERSONAL' ); ?>
+
+				<div class="logoContainer">
+					<div id="p-logo" role="banner">
+						<a class="mw-wiki-logo" href="<?php
+						echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )
+						?>" <?php
+						echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )
+						?>></a>
+						<span>Plataforma colaborativa de Artes Escénicas</span>
+					</div>
+					<?php $this->renderNavigation( 'PERSONAL' ); ?>
+					<div style="clear: both;"></div>
+				</div>
+
 				<div id="left-navigation">
 					<?php $this->renderNavigation( [ 'NAMESPACES', 'VARIANTS' ] ); ?>
 				</div>
@@ -187,11 +200,6 @@ class VectorTemplate extends BaseTemplate {
 				</div>
 			</div>
 			<div id="mw-panel">
-				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="<?php
-					echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )
-					?>" <?php
-					echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )
-					?>></a></div>
 				<?php $this->renderPortals( $this->data['sidebar'] ); ?>
 			</div>
 		</div>
@@ -528,6 +536,9 @@ class VectorTemplate extends BaseTemplate {
 
 							foreach ( $personalTools as $key => $item ) {
 								echo $this->makeListItem( $key, $item );
+								if ($key === "mytalk") {
+									echo "</ul><ul>";
+								}
 							}
 
 							if ( $this->data[ 'rtl' ] ) {
@@ -547,7 +558,7 @@ class VectorTemplate extends BaseTemplate {
 						</h3>
 
 						<form action="<?php $this->text( 'wgScript' ) ?>" id="searchform">
-							<div<?php echo $this->config->get( 'VectorUseSimpleSearch' ) ? ' id="simpleSearch"' : '' ?>>
+							<div<?php echo $this->config->get( 'NodosUseSimpleSearch' ) ? ' id="simpleSearch"' : '' ?>>
 							<?php
 							echo $this->makeSearchInput( [ 'id' => 'searchInput' ] );
 							echo Html::hidden( 'title', $this->get( 'searchtitle' ) );

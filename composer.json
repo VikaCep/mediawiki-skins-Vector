@@ -1,5 +1,5 @@
 {
-	"name": "mediawiki/vector-skin",
+	"name": "mediawiki/nodos-skin",
 	"type": "mediawiki-skin",
 	"description": "Modern version of the MonoBook skin",
 	"keywords": [
@@ -7,7 +7,7 @@
 		"MediaWiki",
 		"skin"
 	],
-	"homepage": "https://www.mediawiki.org/wiki/Skin:Vector",
+	"homepage": "https://www.mediawiki.org/wiki/Skin:Nodos",
 	"license": "GPL-2.0+",
 	"authors": [
 		{
@@ -18,8 +18,8 @@
 		}
 	],
 	"support": {
-		"wiki": "https://www.mediawiki.org/wiki/Skin:Vector",
-		"forum": "https://www.mediawiki.org/wiki/Skin_talk:Vector",
+		"wiki": "https://www.mediawiki.org/wiki/Skin:Nodos",
+		"forum": "https://www.mediawiki.org/wiki/Skin_talk:Nodos",
 		"source": "https://phabricator.wikimedia.org/diffusion/SVEC/",
 		"irc": "irc://irc.freenode.org/mediawiki"
 	},
@@ -31,7 +31,7 @@
 		"branch-alias": {
 			"dev-master": "1.x-dev"
 		},
-		"installer-name": "Vector"
+		"installer-name": "Nodos"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9.*",
