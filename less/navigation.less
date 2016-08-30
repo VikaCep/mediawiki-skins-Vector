@@ -133,6 +133,14 @@ div#mw-head {
 		background-color: white;
 		height: 140px;
 	}
+	
+	.nodos-bar {
+		background-image: url('images/headerbar.png');
+		background-repeat: repeat-x;
+		height: 13px;
+		opacity: 0.5;
+		filter: alpha(opacity=50); /* For IE8 and earlier */
+	}
 }
 
 /* Navigation Containers */
@@ -168,11 +176,17 @@ div#mw-head {
 	}
 
 	span {
-		margin-top: 40px;
+		margin-top: 32px;
 		font-weight: bold;
 		color: @header-text-color;
 		margin-left: 40px;
 		float: right;
+		font-family: 'Roboto Condensed';
+		font-size: 17px;
+
+		@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+			display: none;
+		}
 	}
 }
 

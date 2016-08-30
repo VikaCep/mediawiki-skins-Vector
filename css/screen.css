@@ -39,6 +39,8 @@ body {
   padding: 1em;
   /* Border on top, left, and bottom side */
   border: 1px solid #a7d7f9;
+  border-left-color: #F7E2FC;
+  border-bottom-color: #F7E2FC;
   border-right-width: 0;
   /* Merge the border with tabs' one (in their background image) */
   margin-top: -1px;
@@ -60,6 +62,7 @@ body {
   line-height: 1.3;
   margin-bottom: 0.25em;
   padding: 0;
+  font-weight: bold;
   /* Fallback heading font for scripts which render poorly in @content-heading-font-family. */
   /* See T73240 */
 }
@@ -406,6 +409,10 @@ div.vectorTabs span > a {
   float: left;
   display: block;
 }
+#left-navigation div.vectorTabs {
+  border-left: 1px solid #F7E2FC;
+  background-image: none;
+}
 /* Variants and Actions */
 div.vectorMenu {
   /* @noflip */
@@ -437,7 +444,7 @@ div.vectorMenu h3 span {
   padding-top: 1.375em;
   margin-right: 20px;
   font-weight: normal;
-  color: #4d4d4d;
+  color: #8E2395;
 }
 div.vectorMenu h3 a {
   position: absolute;
@@ -688,6 +695,14 @@ div#mw-head .logoContainer {
   background-color: white;
   height: 140px;
 }
+div#mw-head .nodos-bar {
+  background-image: url('images/headerbar.png');
+  background-repeat: repeat-x;
+  height: 13px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  /* For IE8 and earlier */
+}
 /* Navigation Containers */
 #left-navigation {
   float: left;
@@ -718,11 +733,18 @@ div#mw-head .logoContainer {
   text-decoration: none;
 }
 #p-logo span {
-  margin-top: 40px;
+  margin-top: 32px;
   font-weight: bold;
   color: #726F9D;
   margin-left: 40px;
   float: right;
+  font-family: 'Roboto Condensed';
+  font-size: 17px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+  #p-logo span {
+    display: none;
+  }
 }
 /* Panel */
 div#mw-panel {
@@ -747,7 +769,7 @@ div#mw-panel div.portal {
 }
 div#mw-panel div.portal h3 {
   font-size: 0.75em;
-  color: #4d4d4d;
+  color: #8E2395;
   font-weight: normal;
   margin: 0;
   padding: 0.25em 0 0.25em 0.25em;
@@ -772,10 +794,10 @@ div#mw-panel div.portal div.body ul li {
   word-wrap: break-word;
 }
 div#mw-panel div.portal div.body ul li a {
-  color: #0645ad;
+  color: #98469b;
 }
 div#mw-panel div.portal div.body ul li a:visited {
-  color: #0b0080;
+  color: #94639B;
 }
 div#mw-panel #p-logo + div.portal {
   background-image: none;

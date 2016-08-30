@@ -151,7 +151,8 @@ class NodosTemplate extends BaseTemplate {
 				?>
 				<div id="jump-to-nav" class="mw-jump">
 					<?php $this->msg( 'jumpto' ) ?>
-					<a href="#mw-head"><?php
+					<a href="#mw-head">
+						<?php
 						$this->msg( 'jumptonavigation' )
 					?></a><?php $this->msg( 'comma-separator' ) ?>
 					<a href="#p-search"><?php $this->msg( 'jumptosearch' ) ?></a>
@@ -183,7 +184,7 @@ class NodosTemplate extends BaseTemplate {
 			<h2><?php $this->msg( 'navigation-heading' ) ?></h2>
 
 			<div id="mw-head">
-
+				<div class="nodos-bar"></div>
 				<div class="logoContainer">
 					<div id="p-logo" role="banner">
 						<a class="mw-wiki-logo" href="<?php
@@ -191,7 +192,10 @@ class NodosTemplate extends BaseTemplate {
 						?>" <?php
 						echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )
 						?>></a>
-						<span>Plataforma colaborativa de Artes Escénicas</span>
+						<span>
+							Bienvenido a Nodos, la plataforma colaborativa de Artes Escénicas<br/>
+							Todos podemos subir o editar información, se parte de esta comunidad!
+						</span>
 					</div>
 					<?php $this->renderNavigation( 'PERSONAL' ); ?>
 					<div style="clear: both;"></div>
