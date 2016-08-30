@@ -19,7 +19,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   background: -webkit-linear-gradient(to top, #FFF4F8 5%, white);
@@ -48,7 +48,7 @@ body {
 }
 .mw-body .mw-editsection,
 .mw-body .mw-editsection-like {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .mw-body p {
   line-height: inherit;
@@ -56,7 +56,7 @@ body {
 }
 .mw-body h1,
 .mw-body h2 {
-  font-family: "Linux Libertine", Georgia, Times, serif;
+  font-family: 'Roboto', serif;
   line-height: 1.3;
   margin-bottom: 0.25em;
   padding: 0;
@@ -70,10 +70,10 @@ body {
 .mw-body h1:lang( ko ),
 .mw-body h2:lang( ko ) {
   /* See T65827 */
-  font-family: sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .mw-body h1 {
-  font-size: 1.8em;
+  font-size: 1.9em;
 }
 .mw-body .mw-body-content h1 {
   margin-top: 1em;
@@ -108,7 +108,7 @@ body {
 .mw-body .toc h2 {
   font-size: 100%;
   /* (reset) */
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .mw-body .firstHeading {
   /* Change the default from mediawiki.skinning CSS to let indicators float into heading area */
@@ -194,6 +194,10 @@ pre,
 #p-personal li a {
   color: white;
 }
+#p-personal li a.new,
+#p-personal li a.new:visited {
+  color: #79FFFF;
+}
 /* Icon for Usernames */
 #pt-userpage,
 #pt-anonuserpage {
@@ -202,8 +206,8 @@ pre,
   /* SVG support using a transparent gradient to guarantee cross-browser
 	 * compatibility (browsers able to understand gradient syntax support also SVG) */
   background-image: url('images/user-icon.png');
-  background-image: -webkit-linear-gradient(transparent, transparent), /* @embed */ url('images/user-icon.svg');
-  background-image: linear-gradient(transparent, transparent), /* @embed */ url('images/user-icon.svg');
+  background-image: -webkit-linear-gradient(transparent, transparent), /* @embed */ url('images/user-icon.png');
+  background-image: linear-gradient(transparent, transparent), /* @embed */ url('images/user-icon.png');
   background-image: -o-linear-gradient(transparent, transparent), url('images/user-icon.png');
   padding-left: 15px !important;
 }

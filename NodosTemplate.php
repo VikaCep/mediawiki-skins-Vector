@@ -94,6 +94,11 @@ class NodosTemplate extends BaseTemplate {
 		// Output HTML Page
 		$this->html( 'headelement' );
 		?>
+
+		<style>
+			@import 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed';
+		</style>
+
 		<div id="mw-page-base" class="noprint"></div>
 		<div id="mw-head-base" class="noprint"></div>
 		<div id="content" class="mw-body" role="main">
