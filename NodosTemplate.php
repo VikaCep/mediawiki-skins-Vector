@@ -546,7 +546,7 @@ class NodosTemplate extends BaseTemplate {
 							foreach ( $personalTools as $key => $item ) {
 								echo $this->makeListItem( $key, $item );
 								if ($key === "mytalk") {
-									echo "</ul><ul>";
+									echo "</ul><br/><ul>";
 								}
 							}
 

@@ -264,3 +264,91 @@ pre,
 	font-size: @content-font-size;
 	z-index: 0;
 }
+
+
+.infobox {
+	width: 320px;
+	height: 400px;
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid;
+	position: relative;
+	float: right;
+	margin: 10px;
+
+	.heading {
+		height: 8%;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+	}
+
+	.picture {
+		height: 62%;
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.info {
+		height: 30%;
+
+		p {
+			margin-top: 10px;
+		}
+
+		div {
+			position: absolute;
+			width: 80%;
+			background-color: white;
+			text-align: center;
+			left: 50%;
+			transform: translate(-50%, 0);
+			margin-top: 10px;
+			border-radius: 6px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+	}
+
+}
+
+.infobox.persona {
+
+	border-color: #15616B;
+
+	.heading, .info {
+		background-color: #15616B;
+	}
+}
+
+.infobox.lugar {
+
+	border-color: #496A35;
+
+	.heading, .info {
+		background-color: #496A35;
+	}
+}
+
+.infobox.obra {
+
+	border-color: #783739;
+
+	.heading, .info {
+		background-color: #783739;
+	}
+}
+
+.infobox.grupo {
+
+	border-color: #5D386B;
+
+	.heading, .info {
+		background-color: #5D386B;
+	}
+}
